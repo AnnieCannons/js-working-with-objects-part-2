@@ -112,7 +112,7 @@ var catsForAdoption = [
 // catsForAdoption array.
 
 // Log the name of the first cat so that it prints in the console.
-
+console.log(catsForAdoption[0].name)
 // Log the string "Gracey is a 12 year old cat with white fur." so
 // that it prints in the console. Make sure to use the values from the
 // Gracey object for the dynamic values, and don't just type the
@@ -121,10 +121,13 @@ var catsForAdoption = [
 // concatenation if you're rusty on how to put values into strings.
 // Or, for a more advanced syntax, research and use string
 // interpolation.
+console.log(catsForAdoption[2].name + " is a " + catsForAdoption[2].age + " year old cat with " + catsForAdoption[2].furColor + " fur.")
+console.log(`${catsForAdoption[2].name} is a ${catsForAdoption[2].age} year old cat with ${catsForAdoption[2].furColor} fur.`)
 
 // Log the string "Gracey, Angel, and Kerry are ready to be adopted!"
 // to the console. Same note from above about dynamic and static
 // values.
+console.log(`${catsForAdoption[2].name}, ${catsForAdoption[0].name}, and ${catsForAdoption[1].name} are ready to be adopted!`)
 
 /********************** Exercise 3 - Changing Values In Nested Objects **********************/
 
