@@ -79,17 +79,26 @@ const car = {
 // have.)
 
 // 1. The model of the car.
+console.log(car.model)
 // 2. The year the car was made.
+console.log(car.year)
 // 3. The name of the dealership.
+console.log(car.dealership)
 // 4. The location of the dealership.
+console.log(car.dealership.location)
 // 5. The last feature listed for the car. (Keep in mind that the
 // extra space before the features key is a common practice for
 // readability and doesn't affect the evaluation of the object at
 // all!)
+console.log(car.features[2])
 // 6. The name of the manager at the dealership.
+console.log(car.dealership.employees[2].name)
 // 7. The name of the first owner of the car.
+console.log(car.owners[0].name)
 // 8. The age of the first owner of the car.
+console.log(car.owners[0].age)
 // 9. The type of pet Fred is.
+console.log(car.owners[0].pets[1].type)
 
 /********************** Exercise 2 - Accessing Values (Collections) **********************/
 
