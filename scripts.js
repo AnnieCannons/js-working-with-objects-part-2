@@ -325,10 +325,17 @@ let weatherResponse = {
 
 // Here are the variables you will add the above values to:
 
-let currentTemperature;
-let currentVisibility;
-let hourlyWeatherDescription;
-let dailyMoonPhase;
+let currentTemperature = weatherResponse.current.temp;
+console.log(currentTemperature);
+
+let currentVisibility = weatherResponse.current.visibility;
+console.log(currentVisibility)
+
+let hourlyWeatherDescription = weatherResponse.hourly[0];
+console.log(hourlyWeatherDescription)
+
+let dailyMoonPhase = weatherResponse.daily[0].moon_phase;
+console.log(dailyMoonPhase)
 
 /********************** Exercise 5 - Building Objects **********************/
 
