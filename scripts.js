@@ -343,3 +343,35 @@ console.log(dailyMoonPhase)
 // you build an object that reflect the data collected from the user?
 
 // Create the object below.
+let userProfile = {
+  name: "Chelsea",
+  description: {
+    section1: "Who are you?",
+    location: [
+      {
+        userCountry: "Country",
+        userLocation1: "United States",
+        userStateRegion: "State/Region",
+        userLocation2: "Wisconsin",
+      },
+    ],
+    section2: "About", 
+    userAbout: "Hi! I'm Chelsea. I'm a movie fanatic from Wisconsin. I enjoy all types of movies, especially ones that have a strong female lead or involve Sammuel L Jackson.",
+
+    section3: "My Movies",
+    userMovies: [
+      {
+        userMovie1: "Free Willy",
+        userMovie2: "Frozen",
+        userMovie3: "Titanic",
+        userMovie4: "Moonlight",
+        userMovie5: "Up",
+        userMovie6: "Pulp Fiction",
+        userMovie7: "The Neighbor",
+      },
+    ],
+
+
+  },
+}
+console.log(userProfile)
