@@ -79,17 +79,26 @@ const car = {
 // have.)
 
 // 1. The model of the car.
+console.log(car.model)
 // 2. The year the car was made.
+console.log(car.year)
 // 3. The name of the dealership.
+console.log(car.dealership)
 // 4. The location of the dealership.
+console.log(car.dealership.location)
 // 5. The last feature listed for the car. (Keep in mind that the
 // extra space before the features key is a common practice for
 // readability and doesn't affect the evaluation of the object at
 // all!)
+console.log(car.features[2])
 // 6. The name of the manager at the dealership.
+console.log(car.dealership.employees[2].name)
 // 7. The name of the first owner of the car.
+console.log(car.owners[0].name)
 // 8. The age of the first owner of the car.
+console.log(car.owners[0].age)
 // 9. The type of pet Fred is.
+console.log(car.owners[0].pets[1].type)
 
 /********************** Exercise 2 - Accessing Values (Collections) **********************/
 
@@ -103,7 +112,7 @@ var catsForAdoption = [
 // catsForAdoption array.
 
 // Log the name of the first cat so that it prints in the console.
-
+console.log(catsForAdoption[0].name)
 // Log the string "Gracey is a 12 year old cat with white fur." so
 // that it prints in the console. Make sure to use the values from the
 // Gracey object for the dynamic values, and don't just type the
@@ -112,10 +121,13 @@ var catsForAdoption = [
 // concatenation if you're rusty on how to put values into strings.
 // Or, for a more advanced syntax, research and use string
 // interpolation.
+console.log(catsForAdoption[2].name + " is a " + catsForAdoption[2].age + " year old cat with " + catsForAdoption[2].furColor + " fur.")
+console.log(`${catsForAdoption[2].name} is a ${catsForAdoption[2].age} year old cat with ${catsForAdoption[2].furColor} fur.`)
 
 // Log the string "Gracey, Angel, and Kerry are ready to be adopted!"
 // to the console. Same note from above about dynamic and static
 // values.
+console.log(`${catsForAdoption[2].name}, ${catsForAdoption[0].name}, and ${catsForAdoption[1].name} are ready to be adopted!`)
 
 /********************** Exercise 3 - Changing Values In Nested Objects **********************/
 
@@ -151,23 +163,43 @@ const person = {
 // the person object. You will not be changing the code above, but you
 // will be writing code below that will change the values of the
 // person object.
+console.log(person)
 
 // For each instruction, log the person object so that it prints in
 // the console to make sure your changes worked.
 
 // Change the person's name to "Bob" and their age to 27.
+person.name = "Bob";
+person.age = "27";
+console.log(person)
 
 // Now, change the person's email address to "bob@example.com" and the
 // phone number to "987-654-3210".
+person.contact.email = "bob@example.com"
+person.contact.phone = "987-654-3210";
+console.log(person)
 
 // Now, change the person's zip code to "60601".
+person.address.zipCode = "60601";
+console.log(person)
 
 // Now, change the person's name to "Charlie".
+person.name = "Charlie";
+console.log(person)
 
 // Now, change the person's email address to "charlie@example.com".
+person.contact.email = "charlie@example.com";
+console.log(person)
 
-// Now, change Fred to be a 6-year-old rat and Gracey to be a
-// 4-year-old lizard.
+// Now, change Fred to be a 6-year-old rat 
+person.pets[1].type = "rat";
+person.pets[1].age = "6";
+console.log(person)
+
+//and Gracey to be a 4-year-old lizard.
+person.pets[0].type = "lizard";
+person.pets[0].age = "4";
+console.log(person)
 
 /********************** Exercise 4 - Accessing Values (Deeply Nested Objects) **********************/
 
@@ -293,10 +325,17 @@ let weatherResponse = {
 
 // Here are the variables you will add the above values to:
 
-let currentTemperature;
-let currentVisibility;
-let hourlyWeatherDescription;
-let dailyMoonPhsse;
+let currentTemperature = weatherResponse.current.temp;
+console.log(currentTemperature);
+
+let currentVisibility = weatherResponse.current.visibility;
+console.log(currentVisibility)
+
+let hourlyWeatherDescription = weatherResponse.hourly[0];
+console.log(hourlyWeatherDescription)
+
+let dailyMoonPhase = weatherResponse.daily[0].moon_phase;
+console.log(dailyMoonPhase)
 
 /********************** Exercise 5 - Building Objects **********************/
 
@@ -304,3 +343,35 @@ let dailyMoonPhsse;
 // you build an object that reflect the data collected from the user?
 
 // Create the object below.
+let userProfile = {
+  name: "Chelsea",
+  description: {
+    section1: "Who are you?",
+    location: [
+      {
+        userCountry: "Country",
+        userLocation1: "United States",
+        userStateRegion: "State/Region",
+        userLocation2: "Wisconsin",
+      },
+    ],
+    section2: "About", 
+    userAbout: "Hi! I'm Chelsea. I'm a movie fanatic from Wisconsin. I enjoy all types of movies, especially ones that have a strong female lead or involve Sammuel L Jackson.",
+
+    section3: "My Movies",
+    userMovies: [
+      {
+        userMovie1: "Free Willy",
+        userMovie2: "Frozen",
+        userMovie3: "Titanic",
+        userMovie4: "Moonlight",
+        userMovie5: "Up",
+        userMovie6: "Pulp Fiction",
+        userMovie7: "The Neighbor",
+      },
+    ],
+
+
+  },
+}
+console.log(userProfile)
