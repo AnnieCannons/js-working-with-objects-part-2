@@ -4,7 +4,155 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript - Working With Objects Part 2</title>
+    <link rel="stylesheet" href="./index.css">
     <link rel="icon" href="https://anniecannons.org/favicon.png" />
+    <script src="./scripts.js"></script>
+  
   </head>
-  <body></body>
+  <body>
+    
+<h2> ANSWERS</h1>
+<!-- exercise 1 -->
+<button onclick="myFunction1()">Click here!</button>
+<p id="exercise1"></p>
+<script>
+function myFunction1 () {
+let text;
+
+console.log('');
+console.log('EXERCISE 1');
+console.log('');
+
+console.log('Model of the car: ' + car.model);
+
+console.log('Year the car was made: ' + car.year)
+
+console.log('Dealership: ' + car.dealership.name);
+
+console.log('Dealership location: ' + car.dealership.location);
+
+console.log('Last feature: ' + car.features[0]);
+
+console.log('Manager of dealership: ' +  car.dealership.employees[2].name );
+
+console.log('First car owner: ' + car.owners[0].name);
+
+console.log('Age of first car owner: ' + car.owners[0].age); 
+
+console.log('Fred is a pet: ' + car.owners[0].pets[1].type);
+
+console.log('');
+console.log('EXERCISE 2: ');
+console.log('');
+
+console.log('Name of first cat: ' + catsForAdoption[0].name);
+
+console.log(catsForAdoption[2].name + ' is a ' + catsForAdoption[2].age + ' year old cat with ' + catsForAdoption[2].furColor + ' fur.');
+
+console.log(catsForAdoption[2].name + ', ' + catsForAdoption[0].name + ', ' + catsForAdoption[1].name + ' are ready to be adopted!');
+
+person.name = 'Bob';
+person.age = 27;
+person.contact.email = 'bob@example.com';
+person.contact.phone = '987-654-3210';
+person.address.zipCode = '60601';
+
+console.log('')
+console.log('EXERCISE 3:');
+console.log('');
+
+console.log('New name and age: ' + person.name + ', ' + person.age);
+
+console.log('New email, phone number and zip code for Bob: ' + person.contact.email + ', ' + person.contact.phone + ', ' + person.address.zipCode);
+
+person.name = 'Charlie';
+person.contact.email = 'charlie@example.com';
+
+console.log('Second new name and email: ' + person.name + ', ' + person.contact.email);
+person.pets[0].type = 'lizard';
+person.pets[0].age = 4;
+person.pets[1].type = 'rat';
+person.pets[1].age = 6;
+
+console.log(person.pets[1].name + ' is a ' + person.pets[1].age + ' year old ' + person.pets[1].type + ' and ' + person.pets[0].name + ' is a ' + person.pets[0].age + ' year old ' + person.pets[0].type);
+
+console.log('');
+console.log('EXERCISE 4:');
+console.log('');
+
+let currentTemperature = weatherResponse.current.temp;
+
+let currentVisibility = weatherResponse.current.visibility;
+
+let dailyMoonPhase = weatherResponse.daily[0].moon_phase;
+
+let hourlyWeatherDescription = weatherResponse.hourly[0].weather[0].description;
+
+console.log('Current temperature: ' + currentTemperature + ', visibility: ' + currentVisibility + ', hourly weather description: ' + hourlyWeatherDescription + ' and daily moon phase: ' + dailyMoonPhase); 
+
+console.log('');
+console.log('EXERCISE 5:');
+console.log('');
+
+let designProfile = {
+name: 'Chelsea',
+whoAreYou: {
+  country: 'United States',
+  stateRegion: 'Wisconsin',
+},
+about:  "Hi! I'm Chelsea. I'm a movie fanatic from Wisconsin. I enjoy all types of movies, especially ones that have a strong female lead or involve Sammuel L Jackson",
+
+myMovies: [ 'Free Willy', 'Frozen', 'Titanic', 'Moonlight', 'Up', 'Pulp Fiction', 'The Negotiator']
+};
+
+movies = designProfile.myMovies.join('<br />');
+
+console.log(JSON.stringify(designProfile, null, 4));
+
+text = '<br /> EXERCISE 1: ' + 
+
+'<br /> <br /> - Model of the car: ' + car.model + 
+
+'<br /> - Year the car was made: ' + car.year + 
+
+'<br /> - Dealership name: ' + car.dealership.name + 
+
+'<br /> - Dealership location: ' + car.dealership.location + 
+
+'<br /> - Last feature: ' + car.features[0] + 
+
+'<br /> - Manager of dealership: ' +  car.dealership.employees[2].name +
+
+'<br /> - First car owner: ' + car.owners[0].name + 
+
+'<br /> - Age of first car owner: ' + car.owners[0].age + 
+
+'<br /> - Fred is a pet: ' + car.owners[0].pets[1].type +
+
+'<br /> <br /> EXERCISE 2: <br /> <br /> - First Cat: ' + catsForAdoption[0].name +
+
+'<br /> - ' + catsForAdoption[2].name + ' is a ' + catsForAdoption[2].age + ' year old cat with ' + catsForAdoption[2].furColor + ' fur.' + 
+
+'<br /> - ' + catsForAdoption[2].name + ', ' + catsForAdoption[0].name + ', ' + catsForAdoption[1].name + ' are ready to be adopted!' +
+
+'<br /> <br /> EXERCISE 3: <br /> <br /> - New name and age: ' + person.name + ', ' + person.age + 
+
+'<br /> - New email, phone number and zip code for Bob: ' + person.contact.email + ', ' + person.contact.phone + ', ' + person.address.zipCode + 
+
+'<br /> - Second new name and email: see console log EXERCISE 3 for output' + 
+
+'<br /> - ' + person.pets[1].name + ' is a ' + person.pets[1].age + ' year old ' + person.pets[1].type + ' and ' + person.pets[0].name + ' is a ' + person.pets[0].age + ' year old ' + person.pets[0].type + 
+
+'<br /> <br /> EXERCISE 4: <br /> <br /> - Current temperature: ' + currentTemperature + '<br /> - Current Visibility: ' + currentVisibility + '<br /> - Hourly weather description: ' + hourlyWeatherDescription + '<br /> - Daily moon phase: ' + dailyMoonPhase + 
+
+'<br /> <br /> EXERCISE 5: <br /> <br /> Design Profile Objects: <br /> - Name: ' + designProfile.name + '<br /> <br /> - Who Are You?: <br /> Country: ' + designProfile.whoAreYou.country + '<br /> State/Region: ' + designProfile.whoAreYou.stateRegion + '<br /> <br /> - About: <br />' + designProfile.about + '<br /> <br /> My Movies: <br />' + movies;
+
+
+document.getElementById("exercise1").innerHTML = text;
+}
+</script> 
+
+
+
+  </body>
 </html>
