@@ -125,6 +125,7 @@ console.log(catsForAdoption[2].name+" is a" ,catsForAdoption[2].age+"year old ca
 // Log the string "Gracey, Angel, and Kerry are ready to be adopted!"
 // to the console. Same note from above about dynamic and static
 // values.
+console.log(catsForAdoption[2].name + "," ,catsForAdoption[0].name +" and",catsForAdoption[1].name +" are ready to be adopted!")
 
 /********************** Exercise 3 - Changing Values In Nested Objects **********************/
 
