@@ -90,7 +90,7 @@ let dailyMoonPhase = weatherResponse.daily[0].moon_phase;
 
 let hourlyWeatherDescription = weatherResponse.hourly[0].weather[0].description;
 
-console.log('Current temperature: ' + currentTemperature + ', visibility: ' + currentVisibility + ', hourly weather description: ' + hourlyWeatherDescription + ' and daily moon phase: ' + dailyMoonPhase); 
+console.log('Current temperature: ' + currentTemperature + '. Current Visibility: ' + currentVisibility + '. Hourly weather description: ' + hourlyWeatherDescription + '. Daily moon phase: ' + dailyMoonPhase); 
 
 console.log('');
 console.log('EXERCISE 5:');
@@ -111,7 +111,7 @@ movies = designProfile.myMovies.join('<br />');
 
 console.log(JSON.stringify(designProfile, null, 4));
 
-text = '<br /> EXERCISE 1: ' + 
+text = "click  'cmd + opt + I' to see the logged results in tehe console log as well" +  '>br /> <br /> EXERCISE 1: ' + 
 
 '<br /> <br /> - Model of the car: ' + car.model + 
 
@@ -147,7 +147,7 @@ text = '<br /> EXERCISE 1: ' +
 
 '<br /> <br /> EXERCISE 4: <br /> <br /> - Current temperature: ' + currentTemperature + '<br /> - Current Visibility: ' + currentVisibility + '<br /> - Hourly weather description: ' + hourlyWeatherDescription + '<br /> - Daily moon phase: ' + dailyMoonPhase + 
 
-'<br /> <br /> EXERCISE 5: <br /> <br /> Design Profile Objects: <br /> - Name: ' + designProfile.name + '<br /> <br /> - Who Are You?: <br /> Country: ' + designProfile.whoAreYou.country + '<br /> State/Region: ' + designProfile.whoAreYou.stateRegion + '<br /> <br /> - About: <br />' + designProfile.about + '<br /> <br /> My Movies: <br />' + movies;
+'<br /> <br /> EXERCISE 5: <br /> <br /> Design Profile Objects: <br /> <br /> - Name: ' + designProfile.name + '<br /> <br /> - Who Are You?: <br /> Country: ' + designProfile.whoAreYou.country + '<br /> State/Region: ' + designProfile.whoAreYou.stateRegion + '<br /> <br /> - About: <br />' + designProfile.about + '<br /> <br /> My Movies: <br />' + movies;
 
 
 document.getElementById("exercise1").innerHTML = text;
