@@ -163,23 +163,43 @@ const person = {
 // the person object. You will not be changing the code above, but you
 // will be writing code below that will change the values of the
 // person object.
+console.log(person)
 
 // For each instruction, log the person object so that it prints in
 // the console to make sure your changes worked.
 
 // Change the person's name to "Bob" and their age to 27.
+person.name = "Bob";
+person.age = "27";
+console.log(person)
 
 // Now, change the person's email address to "bob@example.com" and the
 // phone number to "987-654-3210".
+person.contact.email = "bob@example.com"
+person.contact.phone = "987-654-3210";
+console.log(person)
 
 // Now, change the person's zip code to "60601".
+person.address.zipCode = "60601";
+console.log(person)
 
 // Now, change the person's name to "Charlie".
+person.name = "Charlie";
+console.log(person)
 
 // Now, change the person's email address to "charlie@example.com".
+person.contact.email = "charlie@example.com";
+console.log(person)
 
-// Now, change Fred to be a 6-year-old rat and Gracey to be a
-// 4-year-old lizard.
+// Now, change Fred to be a 6-year-old rat 
+person.pets[1].type = "rat";
+person.pets[1].age = "6";
+console.log(person)
+
+//and Gracey to be a 4-year-old lizard.
+person.pets[0].type = "lizard";
+person.pets[0].age = "4";
+console.log(person)
 
 /********************** Exercise 4 - Accessing Values (Deeply Nested Objects) **********************/
 
@@ -308,7 +328,7 @@ let weatherResponse = {
 let currentTemperature;
 let currentVisibility;
 let hourlyWeatherDescription;
-let dailyMoonPhsse;
+let dailyMoonPhase;
 
 /********************** Exercise 5 - Building Objects **********************/
 
