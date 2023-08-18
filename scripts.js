@@ -7,6 +7,9 @@ EXPECT! *
 
 /********************** Exercise 1 - Accessing Nested Values  **********************/
 
+
+//RUN IN LIVE VIEW FOR ANSWERS 
+
 const car = {
   color: "black",
   model: "mustang",
