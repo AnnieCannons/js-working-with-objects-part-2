@@ -79,17 +79,26 @@ const car = {
 // have.)
 
 // 1. The model of the car.
+console.log(car.model)
 // 2. The year the car was made.
+console.log(car.year)
 // 3. The name of the dealership.
+console.log(car.dealership.name)
 // 4. The location of the dealership.
+console.log(car.dealership.location)
 // 5. The last feature listed for the car. (Keep in mind that the
 // extra space before the features key is a common practice for
 // readability and doesn't affect the evaluation of the object at
 // all!)
+console.log(car.features[2])
 // 6. The name of the manager at the dealership.
+console.log(car.dealership.employees[2].name)
 // 7. The name of the first owner of the car.
+console.log(car.owners[0].name)
 // 8. The age of the first owner of the car.
+console.log(car.owners[0].age)
 // 9. The type of pet Fred is.
+console.log(car.owners[0].pets[1].type)
 
 /********************** Exercise 2 - Accessing Values (Collections) **********************/
 
@@ -103,7 +112,7 @@ var catsForAdoption = [
 // catsForAdoption array.
 
 // Log the name of the first cat so that it prints in the console.
-
+console.log(catsForAdoption[1].name)
 // Log the string "Gracey is a 12 year old cat with white fur." so
 // that it prints in the console. Make sure to use the values from the
 // Gracey object for the dynamic values, and don't just type the
@@ -112,11 +121,11 @@ var catsForAdoption = [
 // concatenation if you're rusty on how to put values into strings.
 // Or, for a more advanced syntax, research and use string
 // interpolation.
-
+console.log((catsForAdoption[2].name) + ' is a ' + (catsForAdoption[2].age) + ' year old cat with ' + (catsForAdoption[2].furColor) + ' fur.')
 // Log the string "Gracey, Angel, and Kerry are ready to be adopted!"
 // to the console. Same note from above about dynamic and static
 // values.
-
+console.log((catsForAdoption[0].name)+ ', ' +(catsForAdoption[1].name) + ', and ' +(catsForAdoption[2].name) + ' are ready to be adopted!')
 /********************** Exercise 3 - Changing Values In Nested Objects **********************/
 
 const person = {
@@ -156,18 +165,29 @@ const person = {
 // the console to make sure your changes worked.
 
 // Change the person's name to "Bob" and their age to 27.
-
+person.name = 'Bob'
+person.age = '27'
+console.log(person.name, person.age)
 // Now, change the person's email address to "bob@example.com" and the
 // phone number to "987-654-3210".
-
+person.contact.email = 'bob@example.com'
+person.contact.phone = '987-654-3210'
+console.log(person.contact.email, person.contact.phone)
 // Now, change the person's zip code to "60601".
-
+person.address.zipCode = 60601
+console.log(person.address.zipCode)
 // Now, change the person's name to "Charlie".
-
+person.name = 'Charlie'
 // Now, change the person's email address to "charlie@example.com".
-
-// Now, change Fred to be a 6-year-old rat and Gracey to be a
+person.contact.email = 'charlie@example.com'
+console.log(person.name, person.contact.email)
+// Now, change Fred to be a 6-year-old rat ***!!!(that is a very old rat)!!!*** and Gracey to be a
 // 4-year-old lizard.
+person.pets[0].type = 'lizard'
+person.pets[1].type = 'rat'
+person.pets[0].age = 4
+person.pets[1].age = 6
+console.log(person.pets)
 
 /********************** Exercise 4 - Accessing Values (Deeply Nested Objects) **********************/
 
@@ -280,10 +300,13 @@ let weatherResponse = {
 // values to the variables below:
 
 // 1. The current temperature.
+console.log(weatherResponse.current.temp);
 // 2. The current visibility.
+console.log(weatherResponse.current.visibility);
 // 3. The hourly weather description.
+console.log(weatherResponse.hourly[0].weather[0].description);
 // 4. The daily moon phase.
-
+console.log(weatherResponse.daily[0].moon_phase);
 // Please do not assign the values directly, but access them from the
 // weatherResponse object.
 
@@ -293,14 +316,24 @@ let weatherResponse = {
 
 // Here are the variables you will add the above values to:
 
-let currentTemperature;
-let currentVisibility;
-let hourlyWeatherDescription;
-let dailyMoonPhsse;
+let currentTemperature = weatherResponse.current.temp;
+let currentVisibility = weatherResponse.current.visibility;
+let hourlyWeatherDescription = weatherResponse.hourly[0].weather[0].description;
+let dailyMoonPhase = weatherResponse.daily[0].moon_phase;
 
+console.log(currentTemperature, currentVisibility, hourlyWeatherDescription, dailyMoonPhase)
 /********************** Exercise 5 - Building Objects **********************/
 
 // Looking at the design_profile image in the assets folder, how would
 // you build an object that reflect the data collected from the user?
-
+let userProfile  = {
+  name: 'Chelsea',
+  whoAreYou: {
+    Country: 'United States',
+    StateRegion: 'Wisconsin',
+  },
+    about: "Hi! I'm Chelsea. I'm a movies, especially ones that have a strong female lead or involve Sammuel L. Jackson",
+    myMovies: "Free Willy, Frozen, Titanic, Moonlight, Up, Pulp Fiction, The Negotiator",
+};
 // Create the object below.
+console.log(userProfile)
