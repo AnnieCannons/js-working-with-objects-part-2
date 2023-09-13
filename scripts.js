@@ -7,7 +7,6 @@ EXPECT! *
 
 /********************** Exercise 1 - Accessing Nested Values  **********************/
 
-
 //RUN IN LIVE VIEW FOR ANSWERS 
 
 const car = {
@@ -171,6 +170,10 @@ const person = {
 
 // Now, change Fred to be a 6-year-old rat and Gracey to be a
 // 4-year-old lizard.
+
+
+
+
 
 /********************** Exercise 4 - Accessing Values (Deeply Nested Objects) **********************/
 
